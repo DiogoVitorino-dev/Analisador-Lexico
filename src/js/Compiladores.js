@@ -35,7 +35,7 @@ function Analisador(input = "") {
         tipoultimoCaracter = alternador.includes(token) ? "ALTERNADOR" : "LETRA";
     }
 
-    if (cadeiaAlternada === false && modoExpressao === true) return `Expressao matematica invalida - ${input}`;
+    if ((cadeiaAlternada === false || cadeiaAlternada === null) && modoExpressao === true) return `Expressao matematica invalida - ${input}`;
 
     if (modoExpressao) return `${input} - E uma expressão matemática`;
 
