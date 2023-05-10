@@ -3,7 +3,7 @@ function imprimir() {
     let entrada = document.querySelector("#entrada");
     let saida = document.querySelector("#saida");
 
-    saida.innerHTML = Analizador(entrada.value);
+    saida.innerHTML = Analisador(entrada.value);
 }
 
 // Limpra a área de entada e saida 
