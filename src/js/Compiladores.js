@@ -1,4 +1,3 @@
-// Lembrete: Conter Espaço?
 const validos = "abcçdefghijklmnopqrstuvwxyzABCÇDEFGHIJKLMNOPQRSTUVWXYZ0123456789+-*/()[]{}@#!áéíóúàèìòùâêîôûãẽĩõũÁÉÍÓÚÀÈÌÒÙÂÊÎÔÛÃẼĨÕŨ ";
 
 const especifico = "xyztw";
@@ -38,7 +37,7 @@ function Analisador(input = "") {
 
     if (cadeiaAlternada === false && modoExpressao === true) return `Expressao matematica invalida - ${input}`;
 
-    if (modoExpressao) return `${input} - E uma expressão matematica`;
+    if (modoExpressao) return `${input} - E uma expressão matemática`;
 
     return "Cadeia Aceita";
 }
