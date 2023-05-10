@@ -20,7 +20,7 @@ function Analisador(input = "") {
             modoExpressao = true;
         } else if  (validos.includes(token)) {
 
-        } else return "Não pertence ao conjunto lexical da linguagem";
+        } else return `" ${token} " - Não pertence ao conjunto lexical da linguagem`;
 
         if (count > 0 && (cadeiaAlternada === true || cadeiaAlternada === null)) {
             if (cadeiaAlternada === null) cadeiaAlternada = true;
