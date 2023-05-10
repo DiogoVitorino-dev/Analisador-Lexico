@@ -4,7 +4,7 @@ const validos = "abcçdefghijklmnopqrstuvwxyzABCÇDEFGHIJKLMNOPQRSTUVWXYZ0123456
 const especifico = "xyztw";
 const alternador = "*-+/(){}[]@#!0123456789"
 
-function Analizador(input = "") {
+function Analisador(input = "") {
     if (/[0-9]/.test(input.charAt(0))) return `"${input}" - Palavra reservada pelo sistema`;
 
     if (input.length > 10) input = input.substring(0, 10);
