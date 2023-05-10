@@ -1,13 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" type="text/css" href="src/css/main.css" />
+        <title>Analisador Lexico</title>
+    </head>
+    <body>
+        <div class="container">
+            <div class="box">
+                <h1>Digite a cadeia</h1>
+                <form>
+                    <input type="text" id="entrada" placeholder="Informe sua cadeia..." /><br />
+                    <div class="box-btn">
+                        <button class="btn" type="button" onclick="imprimir()">Analisar</button>
+                        <button id="btn-limpar" type="button">Limpar</button>
+                    </div>
+                </form>
 
-    <script src="Compiladores.js"></script>
-</body>
+                <h3 id="saida"></h3>
+            </div>
+        </div>
+        <script src="src/js/Compiladores.js"></script>
+        <script src="src/js/interface.js"></script>
+    </body>
 </html>
