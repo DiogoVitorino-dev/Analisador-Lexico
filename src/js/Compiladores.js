@@ -2,6 +2,7 @@ const validos = "abcçdefghijklmnopqrstuvwxyzABCÇDEFGHIJKLMNOPQRSTUVWXYZ0123456
 
 const especifico = "xyztw";
 const alternador = "*-+/(){}[]@#!0123456789"
+const numero = "0123456789"
 
 function Analisador(input = "") {
     if (/[0-9]/.test(input.charAt(0))) return `"${input}" - Palavra reservada pelo sistema`;
@@ -25,14 +26,20 @@ function Analisador(input = "") {
             if (cadeiaAlternada === null) cadeiaAlternada = true;
 
             if (tipoultimoCaracter === "LETRA") {
-                if (!alternador.includes(token)) cadeiaAlternada = false;
+                if (!alternador.includes(token) && !numero.includes(token))
+                    cadeiaAlternada = false;
             }
-            if (tipoultimoCaracter === "ALTERNADOR") {
-                if (alternador.includes(token)) cadeiaAlternada = false;
+            else if (tipoultimoCaracter === "ALTERNADOR") {
+                if (alternador.includes(token) && !numero.includes(token))
+                    cadeiaAlternada = false;
             }
+
         }
 
-        tipoultimoCaracter = alternador.includes(token) ? "ALTERNADOR" : "LETRA";
+        if (numero.includes(token) === true)
+            tipoultimoCaracter = "NUMERO"
+        else
+            tipoultimoCaracter = alternador.includes(token) ? "ALTERNADOR" : "LETRA";
     }
 
     if ((cadeiaAlternada === false || cadeiaAlternada === null) && modoExpressao === true) return `Expressao matematica invalida - ${input}`;
