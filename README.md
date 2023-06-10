@@ -1,3 +1,3 @@
 # Analisador-Lexico
 
-- <strong>Abrir o arquivo index.html</strong>
+- <strong>Abrir o arquivo Abrir_aqui.html</strong>
